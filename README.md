@@ -86,7 +86,6 @@ App runs at: [http://localhost:8000](http://localhost:8000)
 | POST   | `/transactions/withdraw/`           | Withdraw funds                   |
 | POST   | `/transactions/transfer/`           | Transfer between accounts        |
 | GET    | `/transactions/`       | Get transaction history          |
-      |
 
 Use token-based.
 
