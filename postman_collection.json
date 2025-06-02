@@ -1,0 +1,764 @@
+{
+	"info": {
+		"_postman_id": "ad4a7e00-2907-4d66-ae0c-bf7494602796",
+		"name": "Banking System API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11366999"
+	},
+	"item": [
+		{
+			"name": "api",
+			"item": [
+				{
+					"name": "create-account",
+					"item": [
+						{
+							"name": "Create a new bank account",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token ce139e953230dcfac9f2bdb0f055f4da9f53550f",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"account_type\": \"ZERO\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/accounts/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"accounts",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Create a new bank account",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Token 57cddbf5cace8224385057da0ad2d5bd05b58d8b",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"account_type\": \"ZERO\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/accounts/?token=57cddbf5cace8224385057da0ad2d5bd05b58d8b",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"accounts",
+												""
+											],
+											"query": [
+												{
+													"key": "token",
+													"value": "57cddbf5cace8224385057da0ad2d5bd05b58d8b"
+												}
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 02 Jun 2025 07:52:14 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.11.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "166"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"1a822549-e9f7-422a-9429-d3f9b52bc547\",\n    \"account_type\": \"ZERO\",\n    \"balance\": \"0.00\",\n    \"status\": \"ACTIVE\",\n    \"kyc_verified\": false,\n    \"created_at\": \"2025-06-02T07:52:14.494653Z\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "withdraw",
+					"item": [
+						{
+							"name": "Withdraw funds from an account",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Token ce139e953230dcfac9f2bdb0f055f4da9f53550f",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"from_account_id\": \"efb0c144-e6c0-4baf-a463-74531655493c\",\n  \"amount\": \"100\"\n  \n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/transactions/withdraw/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transactions",
+										"withdraw",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Withdraw funds from an account",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											},
+											{
+												"key": "Authorization",
+												"value": "Token ce139e953230dcfac9f2bdb0f055f4da9f53550f",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"from_account_id\": \"efb0c144-e6c0-4baf-a463-74531655493c\",\n  \"amount\": \"100\"\n  \n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/transactions/withdraw/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"transactions",
+												"withdraw",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 02 Jun 2025 08:10:39 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.11.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "210"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"3e8d293c-e6c0-47ba-b95d-250c3fcd5e3a\",\n    \"transaction_type\": \"WITHDRAWAL\",\n    \"amount\": \"100.00\",\n    \"created_at\": \"2025-06-02T08:10:39.341012Z\",\n    \"from_account\": \"efb0c144-e6c0-4baf-a463-74531655493c\",\n    \"to_account\": null\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "transfer",
+					"item": [
+						{
+							"name": "Transfer funds between accounts",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"from_account_id\": \"<integer>\",\n  \"to_account_id\": \"<integer>\",\n  \"amount\": \"<number>\"\n}",
+									"options": {
+										"raw": {
+											"headerFamily": "json",
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/transfer/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"transfer",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Transfer successful",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n  \"from_account_id\": \"<integer>\",\n  \"to_account_id\": \"<integer>\",\n  \"amount\": \"<number>\"\n}",
+											"options": {
+												"raw": {
+													"headerFamily": "json",
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/api/transfer/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"api",
+												"transfer",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "transactions",
+					"item": [
+						{
+							"name": "Get transaction history",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token ce139e953230dcfac9f2bdb0f055f4da9f53550f",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/transactions/?account_id=efb0c144-e6c0-4baf-a463-74531655493c",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transactions",
+										""
+									],
+									"query": [
+										{
+											"key": "account_id",
+											"value": "efb0c144-e6c0-4baf-a463-74531655493c"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Get transaction history",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token ce139e953230dcfac9f2bdb0f055f4da9f53550f",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/transactions/?account_id=efb0c144-e6c0-4baf-a463-74531655493c",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"transactions",
+												""
+											],
+											"query": [
+												{
+													"key": "account_id",
+													"value": "efb0c144-e6c0-4baf-a463-74531655493c"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 02 Jun 2025 08:12:05 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.11.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "840"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"3e8d293c-e6c0-47ba-b95d-250c3fcd5e3a\",\n        \"transaction_type\": \"WITHDRAWAL\",\n        \"amount\": \"100.00\",\n        \"created_at\": \"2025-06-02T08:10:39.341012Z\",\n        \"from_account\": \"efb0c144-e6c0-4baf-a463-74531655493c\",\n        \"to_account\": null\n    },\n    {\n        \"id\": \"71d7d8c5-bed8-4f2c-9a6f-597a17b6ec2a\",\n        \"transaction_type\": \"DEPOSIT\",\n        \"amount\": \"13322.00\",\n        \"created_at\": \"2025-06-02T08:10:35.518206Z\",\n        \"from_account\": null,\n        \"to_account\": \"efb0c144-e6c0-4baf-a463-74531655493c\"\n    },\n    {\n        \"id\": \"a0df4d16-7468-4bd8-92c6-1435a5e1ba0d\",\n        \"transaction_type\": \"DEPOSIT\",\n        \"amount\": \"1332.00\",\n        \"created_at\": \"2025-06-02T08:06:46.475275Z\",\n        \"from_account\": null,\n        \"to_account\": \"efb0c144-e6c0-4baf-a463-74531655493c\"\n    },\n    {\n        \"id\": \"47dc0493-ba3d-496d-aa06-dceaadd248ce\",\n        \"transaction_type\": \"DEPOSIT\",\n        \"amount\": \"1000.00\",\n        \"created_at\": \"2025-06-02T08:02:51.681130Z\",\n        \"from_account\": null,\n        \"to_account\": \"efb0c144-e6c0-4baf-a463-74531655493c\"\n    }\n]"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "user",
+					"item": [
+						{
+							"name": "login",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"test\", \"password\": \"demo1234\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/users/login/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"login",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Register User",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"demeo\",\n  \"email\": \"demo@example.com\",\n  \"password\": \"demo1234\",\n  \"date_of_birth\": \"2002-05-30\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8000/users/register/",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"users",
+										"register",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "deposit",
+					"item": [
+						{
+							"name": "deposit",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token ce139e953230dcfac9f2bdb0f055f4da9f53550f",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"to_account_id\": \"efb0c144-e6c0-4baf-a463-74531655493c\",\n    \"amount\": 1332\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{baseUrl}}/transactions/deposit/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"transactions",
+										"deposit",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token ce139e953230dcfac9f2bdb0f055f4da9f53550f",
+												"type": "text"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"to_account_id\": \"efb0c144-e6c0-4baf-a463-74531655493c\",\n    \"amount\": 1332\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{baseUrl}}/transactions/deposit/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"transactions",
+												"deposit",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 02 Jun 2025 08:06:46 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.11.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "POST, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "208"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": \"a0df4d16-7468-4bd8-92c6-1435a5e1ba0d\",\n    \"transaction_type\": \"DEPOSIT\",\n    \"amount\": \"1332.00\",\n    \"created_at\": \"2025-06-02T08:06:46.475275Z\",\n    \"from_account\": null,\n    \"to_account\": \"efb0c144-e6c0-4baf-a463-74531655493c\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "Get Accounts",
+					"item": [
+						{
+							"name": "Get Accounts",
+							"request": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Token ce139e953230dcfac9f2bdb0f055f4da9f53550f",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/accounts/",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"accounts",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "New Request",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Authorization",
+												"value": "Token ce139e953230dcfac9f2bdb0f055f4da9f53550f",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/accounts/",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"accounts",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Mon, 02 Jun 2025 08:26:18 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.11.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "Content-Length",
+											"value": "847"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "[\n    {\n        \"id\": \"efb0c144-e6c0-4baf-a463-74531655493c\",\n        \"account_type\": \"REGULAR\",\n        \"balance\": \"16506.00\",\n        \"status\": \"ACTIVE\",\n        \"kyc_verified\": false,\n        \"created_at\": \"2025-06-02T07:53:24.044827Z\"\n    },\n    {\n        \"id\": \"06e14208-7626-4849-99ae-0272f89eeb54\",\n        \"account_type\": \"STUDENT\",\n        \"balance\": \"80.00\",\n        \"status\": \"ACTIVE\",\n        \"kyc_verified\": false,\n        \"created_at\": \"2025-06-02T08:20:22.276947Z\"\n    },\n    {\n        \"id\": \"ee4fbd4a-8e36-44b3-a87a-1315be2f91bd\",\n        \"account_type\": \"ZERO\",\n        \"balance\": \"0.00\",\n        \"status\": \"ACTIVE\",\n        \"kyc_verified\": false,\n        \"created_at\": \"2025-06-02T08:22:27.367071Z\"\n    },\n    {\n        \"id\": \"cc0e4e6d-2170-4201-949e-0e9ed23e3bd0\",\n        \"account_type\": \"ZERO\",\n        \"balance\": \"0.00\",\n        \"status\": \"ACTIVE\",\n        \"kyc_verified\": false,\n        \"created_at\": \"2025-06-02T08:24:04.504776Z\"\n    },\n    {\n        \"id\": \"c22b8760-8de1-4ff3-98fa-7715f615a05c\",\n        \"account_type\": \"ZERO\",\n        \"balance\": \"0.00\",\n        \"status\": \"ACTIVE\",\n        \"kyc_verified\": false,\n        \"created_at\": \"2025-06-02T08:24:31.286356Z\"\n    }\n]"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "/"
+		}
+	]
+}
